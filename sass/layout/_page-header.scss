@@ -5,7 +5,7 @@
   border-bottom: 1px solid var(--header-line);
 }
 
-.page-header-container {
+.page-header__container {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -14,96 +14,4 @@
 .page-navigation {
   display: flex;
   align-items: center;
-}
-
-.menu {
-  display: flex;
-  column-gap: 50px;
-
-  & .link {
-    color: var(--primary-text-color);
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 1.14;
-    letter-spacing: 0.02em;
-    transition: color var(--transition-dur-and-func);
-  }
-
-  & .link.current {
-    color: var(--accent-color);
-  }
-
-  & .link:hover,
-  & .link:focus {
-    color: var(--accent-color);
-  }
-}
-
-.menu__link {
-  position: relative;
-  display: block;
-
-  &.current::after {
-    display: block;
-    content: '';
-    width: 100%;
-    height: 4px;
-    border-radius: 2px;
-    background: var(--accent-color);
-    position: absolute;
-    bottom: -34px;
-  }
-}
-
-.contacts.list {
-  display: flex;
-  gap: 50px;
-}
-
-.contacts .contacts__e-mail,
-.contacts .contacts__tel {
-  display: flex;
-  align-items: center;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.02em;
-}
-
-.contacts__contact-icon {
-  margin-right: 10px;
-  fill: var(--secondary-text-color);
-  transition: fill var(--transition-dur-and-func);
-}
-
-.contacts .contacts__e-mail,
-.contacts .contacts__tel,
-.advantages__text,
-.profession {
-  color: var(--secondary-text-color);
-}
-
-.contacts .contacts__e-mail,
-.contacts .contacts__e-mail,
-.contacts .contacts__tel,
-.contacts .contacts__tel,
-.footer__contacts,
-.footer__contacts {
-  transition: color var(--transition-dur-and-func);
-}
-
-.contacts .contacts__e-mail:hover,
-.contacts .contacts__e-mail:focus,
-.contacts .contacts__tel:hover,
-.contacts .contacts__tel:focus,
-.footer__contacts:hover,
-.footer__contacts:focus {
-  color: var(--accent-color);
-}
-
-.contacts .contacts__e-mail:hover .contacts__contact-icon,
-.contacts .contacts__e-mail:focus .contacts__contact-icon,
-.contacts .contacts__tel:hover .contacts__contact-icon,
-.contacts .contacts__tel:focus .contacts__contact-icon {
-  fill: var(--accent-color);
 }

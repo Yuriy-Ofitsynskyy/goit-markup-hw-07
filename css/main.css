@@ -83,12 +83,12 @@ button {
 }
 
 .logo {
-  color: var(--logo-color);
   font-family: "Raleway", sans-serif;
   font-weight: 700;
   font-size: 26px;
   line-height: 1.19;
   letter-spacing: 0.03em;
+  color: var(--logo-color);
   margin-right: 93px;
 }
 
@@ -97,14 +97,84 @@ button {
 }
 
 .footer__logo {
-  color: var(--hero-footer__street-color);
   font-family: "Raleway", sans-serif;
   font-weight: 700;
   font-size: 26px;
   line-height: 1.19;
   letter-spacing: 0.03em;
+  color: var(--hero-footer__street-color);
   display: inline-block;
   margin-bottom: 20px;
+}
+
+.menu {
+  display: flex;
+  column-gap: 50px;
+}
+
+.menu__link {
+  position: relative;
+  display: block;
+  color: var(--primary-text-color);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  transition: color var(--transition-dur-and-func);
+}
+.menu__link:hover, .menu__link:focus {
+  color: var(--accent-color);
+}
+
+.menu__link--current {
+  color: var(--accent-color);
+}
+.menu__link--current::after {
+  display: block;
+  content: "";
+  width: 100%;
+  height: 4px;
+  border-radius: 2px;
+  background: var(--accent-color);
+  position: absolute;
+  bottom: -34px;
+}
+
+.contacts {
+  display: flex;
+  gap: 50px;
+}
+
+.contacts__link {
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  color: var(--secondary-text-color);
+  transition: color var(--transition-dur-and-func);
+}
+.contacts__link:hover, .contacts__link:focus {
+  color: var(--accent-color);
+}
+
+.contacts__contact-icon {
+  margin-right: 10px;
+  fill: var(--secondary-text-color);
+  transition: fill var(--transition-dur-and-func);
+}
+.contacts__link:hover .contacts__contact-icon, .contacts__link:focus .contacts__contact-icon {
+  fill: var(--accent-color);
+}
+
+.footer__contacts {
+  transition: color var(--transition-dur-and-func);
+}
+
+.footer__contacts:hover,
+.footer__contacts:focus {
+  color: var(--accent-color);
 }
 
 .social-list {
@@ -371,7 +441,7 @@ button {
   border-bottom: 1px solid var(--header-line);
 }
 
-.page-header-container {
+.page-header__container {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -380,93 +450,6 @@ button {
 .page-navigation {
   display: flex;
   align-items: center;
-}
-
-.menu {
-  display: flex;
-  column-gap: 50px;
-}
-.menu .link {
-  color: var(--primary-text-color);
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.02em;
-  transition: color var(--transition-dur-and-func);
-}
-.menu .link.current {
-  color: var(--accent-color);
-}
-.menu .link:hover, .menu .link:focus {
-  color: var(--accent-color);
-}
-
-.menu__link {
-  position: relative;
-  display: block;
-}
-.menu__link.current::after {
-  display: block;
-  content: "";
-  width: 100%;
-  height: 4px;
-  border-radius: 2px;
-  background: var(--accent-color);
-  position: absolute;
-  bottom: -34px;
-}
-
-.contacts.list {
-  display: flex;
-  gap: 50px;
-}
-
-.contacts .contacts__e-mail,
-.contacts .contacts__tel {
-  display: flex;
-  align-items: center;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.02em;
-}
-
-.contacts__contact-icon {
-  margin-right: 10px;
-  fill: var(--secondary-text-color);
-  transition: fill var(--transition-dur-and-func);
-}
-
-.contacts .contacts__e-mail,
-.contacts .contacts__tel,
-.advantages__text,
-.profession {
-  color: var(--secondary-text-color);
-}
-
-.contacts .contacts__e-mail,
-.contacts .contacts__e-mail,
-.contacts .contacts__tel,
-.contacts .contacts__tel,
-.footer__contacts,
-.footer__contacts {
-  transition: color var(--transition-dur-and-func);
-}
-
-.contacts .contacts__e-mail:hover,
-.contacts .contacts__e-mail:focus,
-.contacts .contacts__tel:hover,
-.contacts .contacts__tel:focus,
-.footer__contacts:hover,
-.footer__contacts:focus {
-  color: var(--accent-color);
-}
-
-.contacts .contacts__e-mail:hover .contacts__contact-icon,
-.contacts .contacts__e-mail:focus .contacts__contact-icon,
-.contacts .contacts__tel:hover .contacts__contact-icon,
-.contacts .contacts__tel:focus .contacts__contact-icon {
-  fill: var(--accent-color);
 }
 
 .hero {
@@ -553,6 +536,11 @@ button {
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
+}
+
+.advantages__text,
+.profession {
+  color: var(--secondary-text-color);
 }
 
 .section.about {
